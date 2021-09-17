@@ -7,7 +7,7 @@ const StyledBurger = styled.div`
 `
 const Burger = ({open, click, links}) => {
 	return (
-		<StyledBurger open={open}>
+		<StyledBurger open={open} className="cursor-pointer">
 			<div id="nav-icon1" onClick={click}>
 				<span />
 				<span />

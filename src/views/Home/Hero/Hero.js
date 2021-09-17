@@ -21,7 +21,7 @@ const StyledHero = styled.div`
 `
 const Hero = ({ image, title, quote, author }) => {
 	return (
-		<StyledHero className="flex flex-col border-b lg:border-r">
+		<StyledHero className="flex flex-col border-b xl:border-r">
 			<div className="relative ">
 				<div id="image">
 					<img src={image} alt="" />

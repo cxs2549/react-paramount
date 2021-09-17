@@ -12,6 +12,7 @@ import Logo from './Logo/Logo'
 import Burger from './Burger/Burger'
 import NavLinks from './NavLinks/NavLinks'
 import Socials from './Socials/Socials'
+import FullNav from './FullNav/FullNav'
 
 const StyledHeader = styled.header`
 	color: white;
@@ -56,16 +57,17 @@ const Header = () => {
 		<StyledHeader open={isOpen} className="h-16 bg-blue-600 text-white">
 			<Wrapper>
 				<Logo />
-				<div ref={menuRef} className="lg:hidden">
+				<div ref={menuRef} className="lg:hidden cursor-pointer">
 					<Burger open={isOpen} links={navLinks2} click={handleClick} />
 				</div>
 				<div className="hidden lg:block">
 					<NavLinks links={navLinks2} />
 				</div>
 				<div className="hidden lg:block">
-					<Socials />
+					<Socials justify="center" />
 				</div>
 			</Wrapper>
+			<FullNav />
 		</StyledHeader>
 	)
 }

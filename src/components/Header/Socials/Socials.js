@@ -8,11 +8,12 @@ import {
 } from 'react-icons/ti'
 
 const StyledSocials = styled.div`
+	justify-content: ${(props) => props.justify};
 	svg {
-		font-size: 2rem;
+		font-size: 2rem !important;
 		cursor: pointer;
 		&:hover {
-			color: #1D48E5;
+			color: #1d48e5;
 		}
 		@media (min-width: 1024px) {
 			&:hover {
@@ -22,9 +23,12 @@ const StyledSocials = styled.div`
 	}
 `
 
-const Socials = () => {
+const Socials = ({ justify }) => {
 	return (
-		<StyledSocials className="flex flex-wrap items-center justify-center w-full gap-8 lg:gap-x-5 lg:gap-y-4 h-full">
+		<StyledSocials
+			justify={justify}
+			className="flex flex-wrap items-center w-full gap-8 lg:gap-x-5 lg:gap-y-2 h-full"
+		>
 			<TiSocialFacebook />
 			<TiSocialInstagram />
 			<TiSocialTwitter />

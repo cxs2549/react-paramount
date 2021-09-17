@@ -44,11 +44,11 @@ const StyledNavLinks = styled.ul`
 		cursor: pointer;
 		&:hover {
 			color: white;
-			background-color: #1D48E5;
+			background-color: #1d48e5;
 		}
 		@media (min-width: 1024px) {
 			&:hover {
-				color: #1D48E5;
+				color: #1d48e5;
 				background-color: #fff;
 			}
 		}
@@ -63,9 +63,11 @@ const NavLinks = ({ links }) => {
 					className="uppercase font-medium text-base whitespace-nowrap flex flex-col items-center gap-6 lg:gap-4  lg:w-40"
 				>
 					<span className="w-full">{link.name}</span>
-					<div id="star">
-						<AiFillStar />
-					</div>
+					{i !== 4 && (
+						<div id="star">
+							<AiFillStar />
+						</div>
+					)}
 				</li>
 			))}
 		</StyledNavLinks>

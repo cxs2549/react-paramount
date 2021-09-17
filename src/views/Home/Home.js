@@ -10,7 +10,7 @@ import { Fade } from 'react-slideshow-image'
 import {GrFormPrevious, GrFormNext} from 'react-icons/gr'
 
 const StyledHome = styled.div`
-	height: 120vh;
+	height: 220vh;
 	@media (min-width: 1024px) {
 		margin-left: 190px;
 	}
